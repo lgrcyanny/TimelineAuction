@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/product_image"
+        android:layout_width="110dip"
+        android:layout_height="75dip"
+        android:layout_alignParentLeft="true"        
+        android:layout_centerVertical="true"
+        android:layout_marginTop="5dip"
+        android:layout_marginLeft="3dip"
+        android:layout_marginBottom="5dip"
+        android:layout_marginRight="10dip" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/product_image" >
+
+        <TextView
+            android:id="@+id/product_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"            
+            android:layout_marginBottom="8dip"
+            android:layout_marginTop="5dip"
+            android:textColor="#000000"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/label_time_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/product_title"
+            android:layout_marginLeft="2dip"
+            android:text="@string/label_time_left"
+            android:textColor="#696969"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/product_time_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_title"
+            android:layout_toRightOf="@id/label_time_left"
+            android:layout_alignBaseline="@id/label_time_left"            
+            android:textColor="#FF8408"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/label_current_bid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/label_time_left"
+            android:layout_marginLeft="2dip"
+            android:text="@string/label_current_bid"
+            android:textColor="#696969"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/product_current_bid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_time_left"
+            android:layout_toRightOf="@id/label_current_bid"
+            android:layout_alignBaseline="@id/label_current_bid"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_bid"
+            android:layout_width="60dip"
+            android:layout_height="30dip"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/label_current_bid"
+            android:text="@string/btn_bid"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btn_follow"
+            android:layout_width="60dip"
+            android:layout_height="30dip"
+            android:layout_below="@id/label_current_bid"
+            android:layout_toRightOf="@id/btn_bid"
+            android:text="@string/btn_follow"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

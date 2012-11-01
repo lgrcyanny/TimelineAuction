@@ -1,0 +1,17 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+    <color name="custom_theme_color">#f9f9f9</color>
+    <color name="titlebackgroundcolor">#3232CD</color>
+    <color name="titletextcolor">#000000</color>
+	
+    <!-- the theme applied to the application or activity -->
+    <style name="CustomActivityTheme" parent="android:style/Theme.Holo.Light">              
+        <item name="android:windowTitleBackgroundStyle">@style/WindowTitleBackground</item>
+    </style>
+    
+    <style name="WindowTitleBackground">     
+        <item name="android:background">@drawable/navigation_background</item>                   
+    </style>
+
+</resources>
