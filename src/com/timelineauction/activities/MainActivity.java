@@ -8,6 +8,9 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.app.ActionBar.Tab;
 import android.app.ActionBar.TabListener;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.ColorDrawable;
 import android.view.Menu;
 import android.view.Window;
 
@@ -15,53 +18,55 @@ public class MainActivity extends Activity {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);		
-		setContentView(R.layout.activity_main);		
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
 		this.initActionbar();
 	}
 
 	private void initActionbar() {
 		ActionBar actionBar = getActionBar();
-		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-		actionBar.setDisplayOptions(0, ActionBar.DISPLAY_SHOW_TITLE);
-		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM
-				   | ActionBar.DISPLAY_SHOW_HOME);
-		// actionBar.setDisplayShowTitleEnabled(false);
+		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);		
+		actionBar.setDisplayShowTitleEnabled(true);
 		// actionBar.setLogo(R.drawable.rabbit);
-		// actionBar.setDisplayHomeAsUpEnabled(true);
-		// actionBar.setDisplayShowCustomEnabled(true);
+		//actionBar.setDisplayHomeAsUpEnabled(true);
+		actionBar.setDisplayShowCustomEnabled(true);
+//		BitmapDrawable background = new BitmapDrawable(
+//				BitmapFactory.decodeResource(getResources(),
+//						R.drawable.navigation_background));
+//		background.setTileModeX(android.graphics.Shader.TileMode.MIRROR);
+//		actionBar.setBackgroundDrawable(new ColorDrawable(R.drawable.actionbar_background));
 
 		Tab tab = actionBar
 				.newTab()
 				.setText(R.string.tab_home)
 				.setTabListener(
-						new MyTabListener<RecommendFragment>(this, "Home",
-								RecommendFragment.class));
+						new MyTabListener<HomeFragment>(this, "Home",
+								HomeFragment.class));
 		actionBar.addTab(tab);
 
 		tab = actionBar
 				.newTab()
-				.setText(R.string.tab_custom)
+				.setText(R.string.tab_recommended)
 				.setTabListener(
-						new MyTabListener<CustomFragment>(this, "Custom",
-								CustomFragment.class));		
+						new MyTabListener<RecommendedFragment>(this, "Recommended",
+								RecommendedFragment.class));
 		actionBar.addTab(tab);
-		
+
 		tab = actionBar
 				.newTab()
-				.setText(R.string.tab_config)
+				.setText(R.string.tab_local)
 				.setTabListener(
-						new MyTabListener<ConfigFragment>(this, "Config",
-								ConfigFragment.class));		
+						new MyTabListener<LocalFragment>(this, "Local",
+								LocalFragment.class));
 		actionBar.addTab(tab);
-		
-//		tab = actionBar
-//				.newTab()
-//				.setText(R.string.tab_search)
-//				.setTabListener(
-//						new MyTabListener<SearchFragment>(this, "Search",
-//								SearchFragment.class));		
-//		actionBar.addTab(tab);
+
+		// tab = actionBar
+		// .newTab()
+		// .setText(R.string.tab_search)
+		// .setTabListener(
+		// new MyTabListener<SearchFragment>(this, "Search",
+		// SearchFragment.class));
+		// actionBar.addTab(tab);
 	}
 
 	private static class MyTabListener<T extends Fragment> implements
@@ -116,9 +121,9 @@ public class MainActivity extends Activity {
 		}
 	}
 
-	 @Override
-	 public boolean onCreateOptionsMenu(Menu menu) {
-	 getMenuInflater().inflate(R.menu.activity_main, menu);
-	 return true;
-	 }
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.activity_main, menu);
+		return true;
+	}
 }

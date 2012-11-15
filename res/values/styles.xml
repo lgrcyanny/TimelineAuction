@@ -1,17 +1,76 @@
-<resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="AppTheme" parent="android:Theme.Light" />
-    <color name="custom_theme_color">#f9f9f9</color>
-    <color name="titlebackgroundcolor">#3232CD</color>
-    <color name="titletextcolor">#000000</color>
-	
-    <!-- the theme applied to the application or activity -->
-    <style name="CustomActivityTheme" parent="android:style/Theme.Holo.Light">              
-        <item name="android:windowTitleBackgroundStyle">@style/WindowTitleBackground</item>
+    <style name="Theme.customtheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_customtheme</item>
+        <item name="android:actionBarStyle">@style/customtheme_solid_ActionBar</item>
+        <item name="android:actionBarTabStyle">@style/customtheme_ActionBarTabStyle</item>
+        <item name="android:popupMenuStyle">@style/customtheme_PopupMenu</item>
+        <item name="android:dropDownListViewStyle">@style/customtheme_DropDownListView</item>
+        <item name="android:actionDropDownStyle">@style/customtheme_DropDownNav</item>
+        <!-- <item name="android:panelBackground">@drawable/menu_hardkey_panel_customtheme</item> -->
+        <!-- Light.DarkActionBar specific -->
+        <item name="android:actionBarWidgetTheme">@style/Theme.customtheme.widget</item>
+        <!-- Text style for actionbar -->
+        <item name="android:actionBarTabTextStyle">@style/myCustomTabTextStyle</item>
+        <item name="android:titleTextStyle">@style/myCustomeTitleTextStyle</item>
     </style>
+
+    <!-- Custom Style for the action bar tab text -->
+    <style name="myCustomTabTextStyle" parent="android:TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/actionbar_text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">0dip</item>        
+    </style>
+
+    <!-- Custom Text apperence -->
+    <style name="myCustomeTitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- Modify the background and backgroundstacked to gradient -->
+    <style name="customtheme_solid_ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid">
+        <item name="android:background">@drawable/actionbar_background</item>
+        <item name="android:backgroundStacked">@drawable/actionbar_background_stacked</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_customtheme</item>
+        <item name="android:progressBarStyle">@style/customtheme_ProgressBar</item>
+        <item name="android:titleTextStyle">@style/myCustomeTitleTextStyle</item>
+    </style>
+
+    <style name="customtheme_transparent_ActionBar" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_customtheme</item>
+        <item name="android:progressBarStyle">@style/customtheme_ProgressBar</item>
+    </style>
+
+    <style name="customtheme_PopupMenu" parent="@android:style/Widget.Holo.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_customtheme</item>
+    </style>
+
+    <style name="customtheme_DropDownListView" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_customtheme</item>
+    </style>
+
+    <style name="customtheme_ActionBarTabStyle" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_customtheme</item>
+        <item name="android:height">8dp</item>
+        <item name="android:width">10dip</item>
+    </style>
+
+    <style name="customtheme_DropDownNav" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_customtheme</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_customtheme</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_customtheme</item>
+    </style>
+
+    <style name="customtheme_ProgressBar" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_customtheme</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.customtheme.widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/customtheme_PopupMenu</item>
+        <item name="android:dropDownListViewStyle">@style/customtheme_DropDownListView</item>
+    </style>
+
     
-    <style name="WindowTitleBackground">     
-        <item name="android:background">@drawable/navigation_background</item>                   
-    </style>
-
 </resources>

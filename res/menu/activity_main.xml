@@ -1,14 +1,25 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:id="@+id/menu_search"
-        android:icon="@drawable/ic_search"
+        android:id="@+id/menu_refresh"
+        android:icon="@drawable/ic_nav_refresh"
         android:showAsAction="ifRoom">
     </item>
     <item
-        android:id="@+id/menu_refresh"
-        android:icon="@drawable/ic_refresh"
-        android:showAsAction="ifRoom">
+        android:id="@+id/option_mybid"
+        android:title="@string/option_menu_mybid">
+    </item>
+    <item
+        android:id="@+id/option_preference"
+        android:title="@string/option_menu_preference">
+    </item>
+    <item
+        android:id="@+id/option_feedback"
+        android:title="@string/option_menu_feedback">
+    </item>
+    <item
+        android:id="@+id/option_exit"
+        android:title="@string/option_menu_exit">
     </item>
 
 </menu>

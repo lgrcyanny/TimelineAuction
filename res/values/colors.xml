@@ -1,0 +1,9 @@
+<resources>
+
+    <color name="actionbar_text">#ff9933</color>    
+	<color name="pressed_navtheme">#ff9933</color>
+	<color name="pressed_customtheme">#CCffcc00</color>
+	<color name="white">#FFFFFF</color>
+	<color name="black">#000000</color>
+	
+</resources>

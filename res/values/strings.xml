@@ -1,15 +1,24 @@
 <resources>
 
-    <string name="app_name">TimelineAuction</string>    
+    <string name="app_name">TimelineAuction</string>
     <string name="menu_settings">Settings</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">TimelineAuction</string>
     <string name="tab_home">Home</string>
-    <string name="tab_custom">Custom</string>
-    <string name="tab_config">Config</string>
-    <string name="tab_search">Search</string>
+    <string name="tab_recommended">Recomm</string>
+    <string name="tab_local">Local</string>
+    
     <string name="label_time_left">Time left:</string>
     <string name="label_current_bid">Current bid:</string>
     <string name="btn_bid">Bid</string>
-    <string name="btn_follow">Follow</string>  
+    <string name="btn_like">Like</string>
+    <string name="option_menu_mybid">My Bids</string>
+    <string name="option_menu_preference">Preference</string>
+    <string name="option_menu_feedback">Feedback</string>
+    <string name="option_menu_exit">Exit</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="title_activity_my_bids">MyBidsActivity</string>
+    <string name="title_activity_preferences">PreferencesActivity</string>
+    <string name="title_activity_feedback">FeedbackActivity</string>
 
 </resources>
